@@ -26,7 +26,16 @@ See [TOLLER Usages](USAGES.md) for more details.
 
 ### Useful scripts from our experiments
 
-See [useful-scripts/](useful-scripts/). To start testing, refer to the following command:
+See [useful-scripts/](useful-scripts/). The following utilities should have been installed:
+
+* aapt (from Android SDK build tools)
+* adb (from Android SDK platform tools)
+* md5sum
+* timeout
+* Python 2 & 3
+* GNU screen
+
+To start testing, refer to the following command:
 
 ```bash
 $ cd useful-scripts

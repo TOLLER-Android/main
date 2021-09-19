@@ -19,8 +19,6 @@ fi
 mkdir -p "$OUT_DIR"
 chmod 775 "$OUT_DIR"
 
-w >"${OUT_DIR}/sys-stats.log"
-
 # Assume that screen output folder already belongs to us.
 rm -rf "$SCREEN_OUT_DIR"
 mkdir -p "$SCREEN_OUT_DIR"
