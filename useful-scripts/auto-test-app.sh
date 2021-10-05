@@ -51,7 +51,7 @@ if ! check_pos_int "$MINICAP_PORT"; then
 	cleanup 2
 fi
 
-ret=$(bash "$TEST_INFRA_BASE/check-app-uid.sh")
+ret=$(bash "check-app-uid.sh")
 if check_pos_int "$ret"; then
 	export TEST_APP_UID="$ret"
 	echo "APP_UID = $TEST_APP_UID"
