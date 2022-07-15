@@ -39,7 +39,7 @@ Now you can start sending commands. After typing each command, press Enter to st
   - `text`: Set the text value of the UI element, which must be an instance of `android.widget.TextView` or its subclass. Must specify one Base64-encoded textual argument, corresponding to the text value to be set.
   - `scroll`: Scroll the UI element. Must provide two enumerative arguments: the first specifies which axis to scroll in, `v`(erticle)/`h`(orizontal), while the second specifies which direction to scroll to, `b`(egining)/`e`(nding).
 
-* `trace`: Start monitoring UI actions and UI updates on the target app. *This command is not used in the TOLLER paper.* Related information will be continuously sent in the current connection line-by-line in the format of `[TIMESTAMP][TAG]VHASH/EXTRA_INFO`. Specifically, depending on the value of `TAG`:
+* `trace`: Start monitoring UI actions and UI updates on the target app. A trace recorder that works with TOLLER is available [here](https://github.com/VET-UI-Testing/test-recorder). *This command is not used in the TOLLER paper.* Related information will be continuously sent in the current connection line-by-line in the format of `[TIMESTAMP][TAG]VHASH/EXTRA_INFO`. Specifically, depending on the value of `TAG`:
   - `VA`: There is a captured UI action on the UI element specified by `VHASH`. `EXTRA_INFO` will start with an integer showing the type of the update:
 
     * 0: click
