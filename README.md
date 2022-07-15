@@ -6,8 +6,6 @@ The name of *TOLLER* comes from [here](https://en.wikipedia.org/wiki/Nova_Scotia
 
 ## Contents
 
-*Please note that we are currently in the process of populating this repository. Please check back later if something is not yet available.*
-
 We assume that you are using a *Unix-like environment* throughout this guide. All experiments were conducted on Ubuntu 16.04.
 
 ### Source code and integration instructions of TOLLER
@@ -22,7 +20,7 @@ See [emulator/](emulator/) for more details.
 
 ### Using TOLLER
 
-See [TOLLER Usages](USAGES.md) for more details.
+See [TOLLER Usages](USAGES.md) for more details. A trace recorder that works with TOLLER is available [here](https://github.com/VET-UI-Testing/test-recorder) (note that it's not used in the TOLLER paper).
 
 ### Useful scripts from our experiments
 
