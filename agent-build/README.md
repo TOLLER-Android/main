@@ -1,6 +1,6 @@
 # Integrating TOLLER's on-device agent with Android framework
 
-**Note:** The following instructions are specifically for AOSP Android 6.0 systems. We managed to integrate TOLLER with both emulators and physical devices (Nexus 5 and Nexus 6P). Some commands and/or code may need to be adjusted for other Android versions. Besides, you may find it more convenient to operate inside a Docker container.
+**Note:** The following instructions are specifically for AOSP Android 6.0 systems. We managed to integrate TOLLER with both emulators and physical devices (Nexus 5 and Nexus 6P). Some commands and/or code may need to be adjusted for other Android versions. Besides, you may find it more convenient to operate inside a Docker container. To get started quickly, consider using our prebuilt Android emulator image from [here](../emulator/).
 
 We are also working on a solution that modifies apps instead of the Android framework.
 
