@@ -32,6 +32,7 @@ See [useful-scripts/](useful-scripts/). The following utilities should have been
 * timeout
 * Python 2 & 3
 * GNU screen
+* ts (`apt install moreutils`)
 
 To start testing, refer to the following command:
 
