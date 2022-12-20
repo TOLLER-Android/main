@@ -67,7 +67,8 @@ if [[ ! -f "$LOGIN_PY_SCRIPT" ]] || ! python "$LOGIN_PY_SCRIPT"; then
 fi
 
 echo "TEST_TIME_BUDGET = ${TEST_TIME_BUDGET}"
-DEV_NO="$DEV_NO" bash device-monitor.sh `expr ${TEST_TIME_BUDGET} + 30` &
+DEV_RESTART_COMMAND="adb reboot" \
+	bash device-monitor.sh `expr ${TEST_TIME_BUDGET} + 30` &
 export PID_COP="$!"
 
 screen -dmS "logcat-${EMU_ID}" "$AUTO_RERUN_SCRIPT_PATH" 1 bash "run-logcat.sh" "${OUT_DIR}/logcat-crash.log" "${OUT_DIR}/logcat-crash.err.log"
