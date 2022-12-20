@@ -38,10 +38,11 @@ To start testing, refer to the following command:
 
 ```bash
 $ cd useful-scripts
-$ bash auto-test-wrapper.sh {APP_ID} {APK_PATH} {TOOL_ID} {RUN_ID} [OPTIONAL_LOGIN_PY_SCRIPT]
+$ export ANDROID_SERIAL="xxx" # Set this if you have multiple devices connected
+$ bash auto-test-wrapper.sh {APP_ID} {APK_PATH} {TOOL_ID} {RUN_ID} {DEV_ID} [OPTIONAL_LOGIN_PY_SCRIPT]
 ```
 
-`APP_ID` and `RUN_ID` are set by you. Make sure that `useful-scripts/run-all-{TOOL_ID}.sh` exists. `TOOL_ID` is in the format of `{TOOL_NAME}-{VARIANT}` (e.g., `chimp-original`). You can specify an auto-login Python script using `OPTIONAL_LOGIN_PY_SCRIPT`, which will be executed on the computer after app launches and before testing starts. You also need to set the environment variable `ANDROID_SERIAL` if there are multiple devices connected.
+`APP_ID`, `RUN_ID`, and `DEV_ID` are set by you. Make sure that `useful-scripts/run-all-{TOOL_ID}.sh` exists. `TOOL_ID` is in the format of `{TOOL_NAME}-{VARIANT}` (e.g., `chimp-original`). You can specify an auto-login Python script using `OPTIONAL_LOGIN_PY_SCRIPT`, which will be executed on the computer after app launches and before testing starts. You also need to set the environment variable `ANDROID_SERIAL` if there are multiple devices connected.
 
 You should see a folder named `test-logs` in the root directory of this repo after running the command. Within this folder, you should see a new folder named `{TOOL_ID}-{APP_ID}-{RUN_ID}`, where all experiment logs are placed.
 

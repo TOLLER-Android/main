@@ -66,6 +66,10 @@ if [[ ! -f "$LOGIN_PY_SCRIPT" ]] || ! python "$LOGIN_PY_SCRIPT"; then
 	cleanup 10
 fi
 
+echo "TEST_TIME_BUDGET = ${TEST_TIME_BUDGET}"
+DEV_NO="$DEV_NO" bash device-monitor.sh `expr ${TEST_TIME_BUDGET} + 30` &
+export PID_COP="$!"
+
 screen -dmS "logcat-${EMU_ID}" "$AUTO_RERUN_SCRIPT_PATH" 1 bash "run-logcat.sh" "${OUT_DIR}/logcat-crash.log" "${OUT_DIR}/logcat-crash.err.log"
 
 # ${TOOL_ID}-${APP_PACKAGE_NAME}
@@ -98,7 +102,13 @@ bash "run-all-${TOOL_ID}.sh" "$EMU_ID" "$APP_PACKAGE_NAME" "$OUT_DIR" "$APK_PATH
 
 if [[ "$?" == "0" ]]; then
 	echo "Tool started.."
-	read -p "Press enter to finish running.."
+	echo "Press Enter to finish running.."
+	echo "PID_COP = $PID_COP"
+	trap "kill ${PID_COP}" INT
+	while kill -0 "$PID_COP"; do
+		read -t 0 && kill "${PID_COP}" && break
+		sleep 2
+	done
 fi
 
 echo "Cleaning up test env.."
