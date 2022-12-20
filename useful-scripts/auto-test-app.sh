@@ -83,7 +83,7 @@ CAP_TIMEOUT=`expr ${TEST_TIME_BUDGET} + 15`
 [[ -d "../minicap" ]] && screen -dmS "minicap-${EMU_ID}" timeout "${CAP_TIMEOUT}" bash "../minicap/start.sh"
 sleep 1
 if [[ -d "../test-recorder" ]]; then
-	ADB_SHELL_APP_RESTART_COMMAND="am force-stop $APP_PACKAGE_NAME && monkey -p $APP_PACKAGE_NAME 1"
+	ADB_SHELL_APP_RESTART_COMMAND="am force-stop $APP_PACKAGE_NAME && monkey -p $APP_PACKAGE_NAME 1" \
 	APP_RESTART_COMMAND="adb shell '$ADB_SHELL_APP_RESTART_COMMAND'" \
 	DEV_RESTART_COMMAND="adb reboot" \
 		screen -dmS "recorder-${EMU_ID}" bash "../test-recorder/run.sh" cleanup

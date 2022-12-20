@@ -4,9 +4,9 @@
 echo "Ape random seed = $TOOL_RANDOM_SEED"
 
 cd ../ape/
-python install.py
+python3 install.py
 bash ../useful-scripts/auto-rerun.sh 1 \
-    python ape.py \
+    python3 ape.py \
         -p "$APP_PACKAGE_NAME" \
         -s "$TOOL_RANDOM_SEED" \
         --running-minutes 9999 \
