@@ -52,11 +52,11 @@ See [test-tools/](test-tools/).
 
 ### Installation packages of apps involved in experiments
 
-Available [here](https://drive.google.com/drive/folders/1xyQAiqbF48gG047MEoTDL_teIR2GRbCN).
+Available [here](https://github.com/TOLLER-Android/main/releases/download/apps/Apps-TOLLER.zip).
 
 ### Raw experiment data
 
-See [here](https://drive.google.com/drive/folders/1sX9zEHlSgRgq80hDPr_LfYE_RHpOGP_u) for raw experimental data.
+See [here](https://github.com/TOLLER-Android/main/releases/tag/raw-exp-data) for raw experimental data.
 Specifically, each Bzipped tarball corresponds to one run, with filename in the form of `{TOOL_NAME}-{APP_NAME}-{RUN_ID}.tar.bz2`.
 
 * There are 12 different values for `TOOL_NAME`, corresponding to the 12 versions of tools shown in our paper. For tool names ending with `enhanced`, they correspond to TOLLER-enhanced tool versions.

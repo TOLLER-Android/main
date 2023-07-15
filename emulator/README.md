@@ -5,7 +5,7 @@ We modified the official Android 6.0 emulator image to integrate TOLLER and our 
 ## To use our prebuilt emulator image
 
 0. Install the latest Android SDK and choose to download the Android 6.0 (API 23) x64 Google APIs image. Make sure that `$ANDROID_SDK/system-images/android-23/google_apis/x86_64/system.img` exists, where `$ANDROID_SDK` points to the root path of your installed Android SDK.
-1. Download `system.img.bz2` from [here](https://drive.google.com/file/d/1xQjzAcd2KcycqVWIlxvKNBv2Okdpnqla/view).
+1. Download `system.img.bz2` from [here](https://github.com/TOLLER-Android/main/releases/download/emulator-image/system.img.bz2).
 2. Uncompress `system.img.bz2` using `bunzip2` and replace the `system.img` found in Step 0. You might want to backup the original `system.img` first.
 3. You can now create new emulators using Android SDK's emulator manager.
 

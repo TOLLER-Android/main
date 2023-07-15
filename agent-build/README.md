@@ -10,7 +10,7 @@ We are also working on a solution that modifies apps instead of the Android fram
 * Latest Android SDK tools, platform tools, build tools, and `android.jar` for the target API level (e.g., 23 for Android 6.0). All these tools can be obtained from the [Android developers](https://developer.android.com/studio#downloads) website.
 * `dex2oat` tool for your target Android version.
     * You can compile this tool from [Android source](https://source.android.com/setup/build/building) by yourself. It is located at `out/host/linux-x86/bin/dex2oat` for x64 Linux system.
-    * Or alternatively, download our [prebuilt binaries](https://drive.google.com/drive/folders/1TsxYrUw00FgMKT1ehIV9Nw2rn4LUpNfZ) if you are using an x64 Linux system and targeting Android 6.0. Note that both `bin` and `lib64` folders need to be downloaded and placed under this directory.
+    * Or alternatively, download our [prebuilt binaries](https://github.com/TOLLER-Android/main/releases/download/dex2oat-linux-x64/dex2oat-linux-x64.zip) if you are using an x64 Linux system and targeting Android 6.0. Note that both `bin` and `lib64` folders need to be placed under this directory.
 * Latest [Smali & Baksmali](https://bitbucket.org/JesusFreke/smali/downloads/) tools. Or use our provided versions.
 * Root your device. Emulators are rooted by default, just remember to start the emulator with the `-writable-system` argument.
 
